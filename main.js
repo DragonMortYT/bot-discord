@@ -17,4 +17,4 @@ client.once('ready', () => {
     console.log('Je suis prêt !');
 });
 
-client.login(token);
+client.login(TOKEN);
