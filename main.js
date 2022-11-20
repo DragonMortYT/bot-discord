@@ -8,4 +8,4 @@ client.once('ready', () => {
     console.log('Je suis prêt !');
 });
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
