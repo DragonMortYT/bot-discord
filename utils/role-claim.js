@@ -1,5 +1,4 @@
 const { Client, MessageReaction } = require('discord.js');
-const firstMessage = require('./first-message');
 
 const emojis = {
     windows: "Windows",
