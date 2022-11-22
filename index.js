@@ -9,4 +9,4 @@ client.once('ready', () => {
     roleClaim(client);
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
