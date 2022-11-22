@@ -56,18 +56,3 @@ module.exports = (client) => {
             message += `${emoji} : ${role}\n`;
         }
     }
-
-    firstMessage(channel, message, reactions);
-
-    client.on('messageReactionAdd', (reaction, user) => {
-        if (reaction.message.channel.id === channel.id) {
-            handleReaction(reaction, user, true);
-        }
-    });
-
-    client.on('messageReactionRemove', (reaction, user) => {
-        if (reaction.message.channel.id === channel.id) {
-            handleReaction(reaction, user, false);
-        }
-    });
-}
