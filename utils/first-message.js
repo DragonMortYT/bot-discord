@@ -38,7 +38,7 @@ const editFirstMessage = ({ messages, text, reactions }) => {
  * @param {Array} reactions 
  */
 module.exports = (channel, text, reactions) => {
-    channel.messages.fetch().then(messages => {
+    channel,messages,fetch(),then(messages => {
         if (messages.size === 0)
             initializeFirstMessage({ channel: channel, text: text, reactions: reactions })
         else if (messages.size === 1)
