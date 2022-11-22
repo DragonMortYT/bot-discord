@@ -19,7 +19,12 @@ const initializeFirstMessage = async ({ channel, text, reactions }) => {
         addReactions(message, reactions)
     });
 }
-
+/**
+ * 
+ * @param {Collection<String, Message>}
+ * @param {String} message 
+ * @param {Array} reactions 
+ */
 const editFirstMessage = ({ messages, text, reactions }) => {
     for (const message of messages) {
 
@@ -34,14 +39,14 @@ const editFirstMessage = ({ messages, text, reactions }) => {
 /**
  * 
  * @param {TextChannel} channel 
- * @param {Message} message 
+ * @param {String} message 
  * @param {Array} reactions 
  */
 module.exports = (channel, text, reactions) => {
     channel.messages.fetch().then(messages => {
         if (messages.size === 0)
-            initializeFirstMessage({ channel: channel, text: text, reactions: reactions })
+            initializeFirstMessage({ channel, text, reactions})
         else if (messages.size === 1)
-            editFirstMessage({ messages: messages, text: text, reactions: reactions })
+            editFirstMessage({ messages, text, reactions})
     });
 }
