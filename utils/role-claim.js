@@ -42,7 +42,7 @@ const handleReaction = (reaction, user, add) => {
  * @param {Client} client 
  */
 module.exports = (client) => {
-    const channel = client.channels.cache.find((channel) => channel.id == '913053365167071242');
+    const channel = client.channels.cache.find((channel) => channel.id == '1042852832048578590');
     const getEmoji = emojiName => client.emojis.cache.find((emoji) => emoji.name === emojiName);
 
     const reactions = [];
